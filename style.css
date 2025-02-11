@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body{
+    background-color: hsl(210, 46%, 95%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Manrope", serif;
+}
+
+#container{
+    background-color: white;
+    height: 560px;
+    width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#articleImage{
+    height: 250px;
+    width: 400px;
+    overflow: hidden;
+}
+
+#articleImage img{
+    height: 300px;
+    width: 400px;
+}
+
+#description h3, p{
+    padding: 30px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#descripton h3{
+    font-weight: 700;
+}
+
+#descripton p{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#footer{
+    display: flex;
+    position: relative;
+}
+
+.authorStyle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.authorStyle #authorImage img{
+    border-radius: 50%;
+    height: 50px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#authorName h4{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+#authorName p{
+    margin-left: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 150px;
+    padding: 0px;
+}
+
+#footer #shareImage{
+    padding: 10px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+#footer #shareImage:hover{
+    background-color: hsl(212, 23%, 69%);
+}
+
+.socialLinksStyle{
+    background-color: hsl(217, 19%, 35%);
+    width: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#socialLinks pre{
+    color: white;
+    font-size: large;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (min-width: 60em) {
+    #container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        width: 850px;
+        overflow: visible;
+    }
+
+    #articleImage{
+        height: 100%;
+        width: 400px;
+    }
+
+    #articleImage img{
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    #description{
+        margin-top: -50px;
+        height: 70%;
+        width: 450px;
+    }
+
+    .authorStyle #authorImage img{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    #footer{
+        position: relative;
+    }
+
+    .socialLinksStyle{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 15px;
+        width: fit-content;
+        position: absolute;
+        bottom: 80px;
+        left: 300px;
+    }
+
+    /* To create a triangular like structure. */
+    /* In CSS, transparent is a keyword that means fully transparent (invisible). 
+    It is often used in properties like background-color and border to make elements 
+    or parts of elements invisible while still occupying space. */
+    .socialLinksStyle::after{
+        content: "";
+        position: absolute;
+        bottom: -14px;
+        left: 35%;
+        /* transform: translateX(50%); */
+        border-top: 15px solid hsl(217, 19%, 35%);
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        height: 0;
+        width: 0;
+        /* transform: rotate(180deg); */
+    }
+}
