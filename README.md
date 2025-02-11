@@ -4,7 +4,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Live Site URL: [Article preview component](https://your-live-site-url.com)
+- Live Site URL: [Article preview component](https://article-preview-component-one-ochre.vercel.app/)
 
 ## My process
 
